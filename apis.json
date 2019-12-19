@@ -1,0 +1,119 @@
+{
+    "name": "National Renewable Energy Laboratory",
+    "description": "The National Renewable Energy Laboratory (NREL) is the nation's primary laboratory for renewable energy and energy efficiency research and development (R&D).",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
+    "tags": [
+        "api provider",
+        "data provider",
+        "energy",
+        "general data",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/national-renewable-energy-laboratory\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "High Performance Building Database",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
+            "humanURL": "http:\/\/nrel.gov",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/high-performance-building-database.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/high-performance-building-database-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Transportation Laws and Incentives",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
+            "humanURL": "http:\/\/nrel.gov",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/transportation-laws-and-incentives.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/transportation-laws-and-incentives-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "National Renewable Energy Laboratory",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
+            "humanURL": "http:\/\/nrel.gov",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/national-renewable-energy-laboratory.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/national-renewable-energy-laboratory-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "http:\/\/developer.nrel.gov\/api\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/national-renewable-energy-laboratory"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/developer.nrel.gov\/"
+        },
+        {
+            "type": "Email",
+            "url": "public.affairs@nrel.gov"
+        },
+        {
+            "type": "Email",
+            "url": "Kaitlyn.Wingfield@nrel.gov"
+        },
+        {
+            "type": "Email",
+            "url": "education.center@nrel.gov"
+        },
+        {
+            "type": "Email",
+            "url": "ASER@nrel.gov"
+        },
+        {
+            "type": "Email",
+            "url": "service.center@nrel.gov"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/#!\/NRELdev"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/NREL"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/nrel.gov"
+        }
+    ]
+}
