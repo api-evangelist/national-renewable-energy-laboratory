@@ -1,0 +1,249 @@
+{
+    "id": "2f93bac782d1cabd0b8e6694d4a1cf08",
+    "name": "Transportation Laws and Incentives",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "c9e492ac037354890d03d1df286ab3b2",
+            "name": "Return a full list of laws and incentives that match your query.",
+            "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1.{output_format}",
+            "description": "Return a full list of laws and incentives that match your query..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "output_format",
+                    "description": "Response format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "limit",
+                    "description": "Limit the number of laws returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "jurisdiction",
+                    "description": "Return laws for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "technology",
+                    "description": "Search by the technology type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'BIOD' for Biodiesel, 'ETH' for Ethanol, 'NG' for Natural Gas, 'LPG' for Propane (LPG), 'HY' for Hydrogen Fuel Cells, 'EFFEC' for Fuel Economy \/ Efficiency, 'IR' for Idle Reduction, 'ELEC' for EVs, 'HEV' for HEVs, 'PHEV' for PHEVs, 'OTHER' for Other, 'AFTMKTCONV' for Aftermarket Conversions, and 'NEVS' for NEVs",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "incentive_type",
+                    "description": "Search by the incentive type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'GNT' for Grants, 'TAX' for Tax Incentives, 'LOANS' for Loans and Leases, 'RBATE' for Rebates, 'EXEM' for Exemptions, and 'OTHER' for Other.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "regulation_type",
+                    "description": "Search by the regulation type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'REGIS' for Registration \/ Licensing, 'STD' for Fuel Production \/ Quality, 'DREST' for Driving \/ Idling, 'REQ' for Acquisition \/ Fuel Use, 'FUEL' for Fuel Taxes, 'RFS' for Renewable Fuel Standard \/ Mandate, 'OTHER' for Other, 'AIRQEMISSIONS' for Air Quality \/ Emissions, and 'CCEINIT' for Climate Change \/ Energy Initiatives",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user_type",
+                    "description": "Search by the user type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'IND' for Vehicle Owner\/Driver, 'FLEET' for Fleet Purchaser\/Manager, 'STATION' for Fueling \/ TSE Infrastructure Owner, 'AFP' for Alternative Fuel Producer, 'AFS' for Alternative Fuel Dealer, 'PURCH' for Alternative Fuel Purchaser, 'MAN' for AFV Manufacturer\/Retrofitter, and 'OTHER' for Other",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "poc",
+                    "description": "Include points of contacts in the return value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "recent",
+                    "description": "Return only recently added or updated laws and incentives",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "expired",
+                    "description": "Show only expired, repealed or archived laws and incentives.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "law_type",
+                    "description": "Search by the law type. A single type, or a comma-separate list of multiple types, may be given. Values are as follows: 'STATEINC' for State Incentives, 'UPINC ' for Utility\/Private Incentives, 'LAWREG' for Laws and Regulations, 'INC' for Incentives, 'PROG' for Programs, 'LUP' for Last Updated, 'OVIEW' for Overview, and 'HILITE' for Highlights",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "keyword",
+                    "description": "Search laws by keyword in title or text.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "local",
+                    "description": "Show only local examples of laws and incentives.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "rawModeData": ""
+        },
+        {
+            "id": "4a53a1331881f97ed787a3af3322432e",
+            "name": "Return the law categories for a given category type.",
+            "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1\/category-list.{output_format}",
+            "description": "Return the law categories for a given category type..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "output_format",
+                    "description": "Response format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "type",
+                    "description": "Search by the category type.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "rawModeData": ""
+        },
+        {
+            "id": "e43d46359007fbfc4d43ea9426701274",
+            "name": "Get the points of contact for a given jurisdiction.",
+            "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1\/pocs.{output_format}",
+            "description": "Get the points of contact for a given jurisdiction..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "output_format",
+                    "description": "Response format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "jurisdiction",
+                    "description": "Return laws for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "rawModeData": ""
+        },
+        {
+            "id": "d712339cfea373e40697895455beacf8",
+            "name": "Fetch the details of a specific law given the law's ID.",
+            "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1\/{id}.{output_format}",
+            "description": "Fetch the details of a specific law given the law's id..",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "output_format",
+                    "description": "Response format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "id",
+                    "description": "The id of the law that you are searching",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "poc",
+                    "description": "Include points of contacts in the return value.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "rawModeData": ""
+        }
+    ]
+}
