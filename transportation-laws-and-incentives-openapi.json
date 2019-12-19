@@ -1,0 +1,416 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "0.1.0",
+        "title": "Transportation Laws and Incentives",
+        "description": "Query our database of State and Federal Laws and Incentives for Alternative Fuels",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws"
+    ],
+    "paths": {
+        "\/v1.{output_format}": {
+            "get": {
+                "summary": "Return a full list of laws and incentives that match your query.",
+                "description": "Return a full list of laws and incentives that match your query..",
+                "operationId": "V1OutputFormatGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "output_format",
+                        "in": "path",
+                        "description": "Response format"
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "Limit the number of laws returned"
+                    },
+                    {
+                        "name": "jurisdiction",
+                        "in": "query",
+                        "description": "Return laws for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C."
+                    },
+                    {
+                        "name": "technology",
+                        "in": "query",
+                        "description": "Search by the technology type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'BIOD' for Biodiesel, 'ETH' for Ethanol, 'NG' for Natural Gas, 'LPG' for Propane (LPG), 'HY' for Hydrogen Fuel Cells, 'EFFEC' for Fuel Economy \/ Efficiency, 'IR' for Idle Reduction, 'ELEC' for EVs, 'HEV' for HEVs, 'PHEV' for PHEVs, 'OTHER' for Other, 'AFTMKTCONV' for Aftermarket Conversions, and 'NEVS' for NEVs"
+                    },
+                    {
+                        "name": "incentive_type",
+                        "in": "query",
+                        "description": "Search by the incentive type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'GNT' for Grants, 'TAX' for Tax Incentives, 'LOANS' for Loans and Leases, 'RBATE' for Rebates, 'EXEM' for Exemptions, and 'OTHER' for Other."
+                    },
+                    {
+                        "name": "regulation_type",
+                        "in": "query",
+                        "description": "Search by the regulation type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'REGIS' for Registration \/ Licensing, 'STD' for Fuel Production \/ Quality, 'DREST' for Driving \/ Idling, 'REQ' for Acquisition \/ Fuel Use, 'FUEL' for Fuel Taxes, 'RFS' for Renewable Fuel Standard \/ Mandate, 'OTHER' for Other, 'AIRQEMISSIONS' for Air Quality \/ Emissions, and 'CCEINIT' for Climate Change \/ Energy Initiatives"
+                    },
+                    {
+                        "name": "user_type",
+                        "in": "query",
+                        "description": "Search by the user type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'IND' for Vehicle Owner\/Driver, 'FLEET' for Fleet Purchaser\/Manager, 'STATION' for Fueling \/ TSE Infrastructure Owner, 'AFP' for Alternative Fuel Producer, 'AFS' for Alternative Fuel Dealer, 'PURCH' for Alternative Fuel Purchaser, 'MAN' for AFV Manufacturer\/Retrofitter, and 'OTHER' for Other"
+                    },
+                    {
+                        "name": "poc",
+                        "in": "query",
+                        "description": "Include points of contacts in the return value."
+                    },
+                    {
+                        "name": "recent",
+                        "in": "query",
+                        "description": "Return only recently added or updated laws and incentives"
+                    },
+                    {
+                        "name": "expired",
+                        "in": "query",
+                        "description": "Show only expired, repealed or archived laws and incentives."
+                    },
+                    {
+                        "name": "law_type",
+                        "in": "query",
+                        "description": "Search by the law type. A single type, or a comma-separate list of multiple types, may be given. Values are as follows: 'STATEINC' for State Incentives, 'UPINC ' for Utility\/Private Incentives, 'LAWREG' for Laws and Regulations, 'INC' for Incentives, 'PROG' for Programs, 'LUP' for Last Updated, 'OVIEW' for Overview, and 'HILITE' for Highlights"
+                    },
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "description": "Search laws by keyword in title or text."
+                    },
+                    {
+                        "name": "local",
+                        "in": "query",
+                        "description": "Show only local examples of laws and incentives."
+                    }
+                ]
+            }
+        },
+        "\/v1\/category-list.{output_format}": {
+            "get": {
+                "summary": "Return the law categories for a given category type.",
+                "description": "Return the law categories for a given category type..",
+                "operationId": "V1CategoryListOutputFormatGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "output_format",
+                        "in": "path",
+                        "description": "Response format"
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "description": "Search by the category type."
+                    }
+                ]
+            }
+        },
+        "\/v1\/pocs.{output_format}": {
+            "get": {
+                "summary": "Get the points of contact for a given jurisdiction.",
+                "description": "Get the points of contact for a given jurisdiction..",
+                "operationId": "V1PocsOutputFormatGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "output_format",
+                        "in": "path",
+                        "description": "Response format"
+                    },
+                    {
+                        "name": "jurisdiction",
+                        "in": "query",
+                        "description": "Return laws for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C."
+                    }
+                ]
+            }
+        },
+        "\/v1\/{id}.{output_format}": {
+            "get": {
+                "summary": "Fetch the details of a specific law given the law's ID.",
+                "description": "Fetch the details of a specific law given the law's id..",
+                "operationId": "V1IdOutputFormatGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "output_format",
+                        "in": "path",
+                        "description": "Response format"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The id of the law that you are searching"
+                    },
+                    {
+                        "name": "poc",
+                        "in": "query",
+                        "description": "Include points of contacts in the return value."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Category": {
+                "type": "object",
+                "properties": {
+                    "category_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CategoryResults": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "FullCategory": {
+                "type": "object",
+                "properties": {
+                    "category_type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "help_text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sort_order": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Law": {
+                "type": "object",
+                "properties": {
+                    "agency": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "amended_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "archived_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "categories": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "contacts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "enacted_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "expired_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "is_recent": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "plaintext": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "recent_update_or_new": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "references": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "repealed_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "seq_num": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "significant_update_date": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "text": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "topics": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "types": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LawReference": {
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "url": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LawResult": {
+                "type": "object"
+            },
+            "LawTopics": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "sort_order": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LawType": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "LawsResponse": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Metadata": {
+                "type": "object",
+                "properties": {
+                    "count": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Poc": {
+                "type": "object",
+                "properties": {
+                    "agency": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "fax": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "telephone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "title": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "web_page": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PocResults": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
