@@ -1,0 +1,124 @@
+{
+    "id": "71b7c04a265b8b0cc69809fa67153f73",
+    "name": "High Performance Building Database",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "800968cf2862e69b5b3430d7aaf6de36",
+            "name": "Get Projects",
+            "url": "httpsdeveloper.nrel.gov\/api\/building-case-studies\/project.{output_format}",
+            "description": "Get Projects",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "output_format",
+                    "description": "Response Format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "search",
+                    "description": "Search Text",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "portal",
+                    "description": "Portal ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "page",
+                    "description": "Page Number",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "city",
+                    "description": "City",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "province",
+                    "description": "State or Province (ex: 'CO', 'AZ')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "region",
+                    "description": "Climate Region.  Use integer from mapping (256: '1A: Very Hot - Humid', 257: '1B: Very Hot - Dry', 258: '2A: Hot - Humid', 259: '2B: Hot - Dry', 260: '3A: Warm - Humid', 261: '3B: Warm - Dry', 262: '3C: Warm - Marine', 263: '4A: Mixed - Humid', 264: '4B: Mixed - Dry', 265: '4C: Mixed - Marine', 266: '5A: Cool - Humid', 267: '5B: Cool - Dry', 268: '5C: Cool - Marine', 269: '6A: Cold - Humid', 270: '6B: Cold - Dry', 271: '7: Very Cold', 272: '8: Subarctic')",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "71b7c04a265b8b0cc69809fa67153f73",
+            "rawModeData": ""
+        },
+        {
+            "id": "b7ac1758e73b59d629826930ef7696cf",
+            "name": "Get Project Details",
+            "url": "httpsdeveloper.nrel.gov\/api\/building-case-studies\/project\/{project_id}.{output_format}",
+            "description": "This API allows users to request metadata associated with the specific Document.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "output_format",
+                    "description": "Response Format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "project_id",
+                    "description": "Project ID",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "71b7c04a265b8b0cc69809fa67153f73",
+            "rawModeData": ""
+        }
+    ]
+}
