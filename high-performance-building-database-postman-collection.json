@@ -1,5 +1,5 @@
 {
-    "id": "71b7c04a265b8b0cc69809fa67153f73",
+    "id": "12b8e6b24d41b7a5de8fb50baf0be92d",
     "name": "High Performance Building Database",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "800968cf2862e69b5b3430d7aaf6de36",
+            "id": "7ff526b41b0533464f30a7164bbf7686",
             "name": "Get Projects",
             "url": "httpsdeveloper.nrel.gov\/api\/building-case-studies\/project.{output_format}",
             "description": "Get Projects",
@@ -79,11 +79,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "71b7c04a265b8b0cc69809fa67153f73",
+            "collectionId": "12b8e6b24d41b7a5de8fb50baf0be92d",
             "rawModeData": ""
         },
         {
-            "id": "b7ac1758e73b59d629826930ef7696cf",
+            "id": "46b1809b3872aab5af3765c52cb350c7",
             "name": "Get Project Details",
             "url": "httpsdeveloper.nrel.gov\/api\/building-case-studies\/project\/{project_id}.{output_format}",
             "description": "This API allows users to request metadata associated with the specific Document.",
@@ -117,7 +117,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "71b7c04a265b8b0cc69809fa67153f73",
+            "collectionId": "12b8e6b24d41b7a5de8fb50baf0be92d",
             "rawModeData": ""
         }
     ]
