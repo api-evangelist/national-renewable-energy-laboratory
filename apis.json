@@ -1,13 +1,12 @@
 {
     "name": "National Renewable Energy Laboratory",
-    "description": "The National Renewable Energy Laboratory (NREL) is the nation's primary laboratory for renewable energy and energy efficiency research and development (R&D).",
-    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
+    "description": "<p>The National Renewable Energy Laboratory (NREL), located in Golden, Colorado, is the United States' primary laboratory for renewable energy and energy efficiency research and development. The National Renewable Energy Laboratory (NREL) is a government-owned, contractor-operated facility, and is funded through the U.S. Department of Energy (DOE). This arrangement allows a private entity to operate the lab on behalf of the federal government under a prime contract. NREL receives funding from Congress to be applied toward research and development projects. NREL also performs research on photovoltaics (PV) under the National Center for Photovoltaics. NREL has a number of PV research capabilities including research and development, testing, and deployment. NREL's campus houses several facilities dedicated to PV research.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/470px-NREL.jpg",
     "tags": [
         "api provider",
         "data provider",
-        "energy",
-        "general data",
-        "have api"
+        "have api",
+        "profile"
     ],
     "created": "2019-12-21",
     "modified": "2019-12-21",
@@ -15,53 +14,9 @@
     "specificationVersion": "0.14",
     "apis": [
         {
-            "name": "High Performance Building Database",
-            "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
-            "humanURL": "http:\/\/nrel.gov",
-            "baseURL": "",
-            "tags": [],
-            "properties": [
-                {
-                    "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/national-renewable-energy-laboratory\/master\/high-performance-building-database-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/high-performance-building-database.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/national-renewable-energy-laboratory\/master\/high-performance-building-database-postman-collection.json"
-                }
-            ]
-        },
-        {
-            "name": "Transportation Laws and Incentives",
-            "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
-            "humanURL": "http:\/\/nrel.gov",
-            "baseURL": "",
-            "tags": [],
-            "properties": [
-                {
-                    "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/national-renewable-energy-laboratory\/master\/transportation-laws-and-incentives-openapi.json"
-                },
-                {
-                    "type": "x-openapi",
-                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/transportation-laws-and-incentives.json"
-                },
-                {
-                    "type": "x-postman-collecction",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/national-renewable-energy-laboratory\/master\/transportation-laws-and-incentives-postman-collection.json"
-                }
-            ]
-        },
-        {
             "name": "National Renewable Energy Laboratory",
             "description": null,
-            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1097-national-renewable-energy-laboratory.jpg",
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/logos\/470px-NREL.jpg",
             "humanURL": "http:\/\/nrel.gov",
             "baseURL": "",
             "tags": [],
@@ -73,6 +28,10 @@
                 {
                     "type": "x-openapi",
                     "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/national-renewable-energy-laboratory.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/national-renewable-energy-laboratory\/master\/national-renewable-energy-laboratory-postman-collection.json"
                 },
                 {
                     "type": "x-postman-collecction",
@@ -92,44 +51,16 @@
             "url": "http:\/\/developer.nrel.gov\/api\/"
         },
         {
-            "type": "Crunchbase",
-            "url": "https:\/\/crunchbase.com\/organization\/national-renewable-energy-laboratory"
-        },
-        {
             "type": "Developers",
-            "url": "http:\/\/developer.nrel.gov\/"
-        },
-        {
-            "type": "Email",
-            "url": "public.affairs@nrel.gov"
-        },
-        {
-            "type": "Email",
-            "url": "Kaitlyn.Wingfield@nrel.gov"
-        },
-        {
-            "type": "Email",
-            "url": "education.center@nrel.gov"
-        },
-        {
-            "type": "Email",
-            "url": "ASER@nrel.gov"
-        },
-        {
-            "type": "Email",
-            "url": "service.center@nrel.gov"
-        },
-        {
-            "type": "Twitter",
-            "url": "https:\/\/twitter.com\/#!\/NRELdev"
-        },
-        {
-            "type": "Twitter",
-            "url": "https:\/\/twitter.com\/NREL"
+            "url": "http:\/\/developer.nrel.gov"
         },
         {
             "type": "Website",
             "url": "http:\/\/nrel.gov"
+        },
+        {
+            "type": "Wikipedia",
+            "url": "http:\/\/en.wikipedia.org\/wiki\/National_Renewable_Energy_Laboratory"
         }
     ]
 }
