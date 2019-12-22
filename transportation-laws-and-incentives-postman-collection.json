@@ -1,5 +1,5 @@
 {
-    "id": "2f93bac782d1cabd0b8e6694d4a1cf08",
+    "id": "bd6a6165af385b2c04a5112a6954b55b",
     "name": "Transportation Laws and Incentives",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "c9e492ac037354890d03d1df286ab3b2",
+            "id": "7633b6bbf0ff570f706b7e7f6f7f32fa",
             "name": "Return a full list of laws and incentives that match your query.",
             "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1.{output_format}",
             "description": "Return a full list of laws and incentives that match your query..",
@@ -121,11 +121,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "collectionId": "bd6a6165af385b2c04a5112a6954b55b",
             "rawModeData": ""
         },
         {
-            "id": "4a53a1331881f97ed787a3af3322432e",
+            "id": "941a0e982ac93cbb134c5608f9025695",
             "name": "Return the law categories for a given category type.",
             "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1\/category-list.{output_format}",
             "description": "Return the law categories for a given category type..",
@@ -159,11 +159,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "collectionId": "bd6a6165af385b2c04a5112a6954b55b",
             "rawModeData": ""
         },
         {
-            "id": "e43d46359007fbfc4d43ea9426701274",
+            "id": "a7083816c7977ea29bcbdaf1fc6ced2f",
             "name": "Get the points of contact for a given jurisdiction.",
             "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1\/pocs.{output_format}",
             "description": "Get the points of contact for a given jurisdiction..",
@@ -197,11 +197,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "collectionId": "bd6a6165af385b2c04a5112a6954b55b",
             "rawModeData": ""
         },
         {
-            "id": "d712339cfea373e40697895455beacf8",
+            "id": "9e2056c0bac9d2a323556ddb5acd1b48",
             "name": "Fetch the details of a specific law given the law's ID.",
             "url": "httpsdeveloper.nrel.gov\/api\/transportation-incentives-laws\/v1\/{id}.{output_format}",
             "description": "Fetch the details of a specific law given the law's id..",
@@ -242,7 +242,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "2f93bac782d1cabd0b8e6694d4a1cf08",
+            "collectionId": "bd6a6165af385b2c04a5112a6954b55b",
             "rawModeData": ""
         }
     ]
