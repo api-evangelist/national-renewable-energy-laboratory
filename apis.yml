@@ -1,9 +1,9 @@
 aid: national-renewable-energy-laboratory
 name: National Renewable Energy Laboratory
 description: >-
-  The National Renewable Energy Laboratorys developer network helps developers
-  access and use energy data via Web services, including renewable energy and
-  alternative fuel data. 
+  The National Renewable Energy Laboratorys developer network helps developers access
+  and use energy data via Web services, including renewable energy and alternative
+  fuel data.
 type: Index
 position: Consumer
 access: 3rd-Party
@@ -16,12 +16,13 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/national-renewable-energy-laboratory/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: national-renewable-energy-laboratory:national-renewable-energy-laboratory
+  - aid: 
+      national-renewable-energy-laboratory:national-renewable-energy-laboratory
     name: National Renewable Energy Laboratory
     description: >-
-      The National Renewable Energy Laboratorys developer network helps
-      developers access and use energy data via Web services, including
-      renewable energy and alternative fuel data. 
+      The National Renewable Energy Laboratorys developer network helps developers
+      access and use energy data via Web services, including renewable energy and
+      alternative fuel data.
     humanURL: ' https://developer.nrel.gov/'
     tags:
       - API
