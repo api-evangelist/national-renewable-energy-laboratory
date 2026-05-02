@@ -1,0 +1,164 @@
+openapi: 3.0.3
+info:
+  title: NREL Developer Network APIs
+  description: >-
+    Selected endpoints from the National Renewable Energy Laboratory (NREL)
+    developer network covering alternative fuel stations, solar resource and
+    PV modeling, and utility electricity rate lookups. All endpoints require
+    a developer API key.
+  version: 1.0.0
+  contact:
+    name: NREL Developer Network
+    url: https://developer.nrel.gov/
+servers:
+  - url: https://developer.nrel.gov/api
+    description: Production
+security:
+  - apiKeyQuery: []
+paths:
+  /alt-fuel-stations/v1.json:
+    get:
+      summary: Search alternative fuel stations
+      description: Retrieve alternative fuel station records with filters for fuel type, state, location, and access.
+      parameters:
+        - name: fuel_type
+          in: query
+          schema: { type: string }
+          description: Comma-separated list (e.g., ELEC,LPG,CNG).
+        - name: state
+          in: query
+          schema: { type: string }
+        - name: zip
+          in: query
+          schema: { type: string }
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [E, P, T, all]
+        - name: access
+          in: query
+          schema:
+            type: string
+            enum: [public, private]
+        - name: limit
+          in: query
+          schema: { type: integer }
+      responses:
+        '200':
+          description: Alternative fuel station records.
+  /alt-fuel-stations/v1/nearest.json:
+    get:
+      summary: Find nearest alternative fuel stations
+      parameters:
+        - name: location
+          in: query
+          schema: { type: string }
+          description: Address or place name.
+        - name: latitude
+          in: query
+          schema: { type: number, format: float }
+        - name: longitude
+          in: query
+          schema: { type: number, format: float }
+        - name: radius
+          in: query
+          schema: { type: number }
+          description: Search radius in miles.
+        - name: fuel_type
+          in: query
+          schema: { type: string }
+      responses:
+        '200':
+          description: Nearest stations within the radius.
+  /pvwatts/v8.json:
+    get:
+      summary: PVWatts solar PV system production estimate
+      description: Estimate the energy production of grid-connected photovoltaic systems for any location.
+      parameters:
+        - name: system_capacity
+          in: query
+          required: true
+          schema: { type: number }
+          description: System size in kW DC.
+        - name: module_type
+          in: query
+          required: true
+          schema:
+            type: integer
+            enum: [0, 1, 2]
+        - name: losses
+          in: query
+          required: true
+          schema: { type: number }
+        - name: array_type
+          in: query
+          required: true
+          schema:
+            type: integer
+            enum: [0, 1, 2, 3, 4]
+        - name: tilt
+          in: query
+          required: true
+          schema: { type: number }
+        - name: azimuth
+          in: query
+          required: true
+          schema: { type: number }
+        - name: address
+          in: query
+          schema: { type: string }
+        - name: lat
+          in: query
+          schema: { type: number, format: float }
+        - name: lon
+          in: query
+          schema: { type: number, format: float }
+        - name: timeframe
+          in: query
+          schema:
+            type: string
+            enum: [monthly, hourly]
+      responses:
+        '200':
+          description: Modeled solar PV production output.
+  /utility_rates/v3.json:
+    get:
+      summary: Utility electricity rates by location
+      description: Lookup average commercial, industrial, and residential utility rates for a given location.
+      parameters:
+        - name: address
+          in: query
+          schema: { type: string }
+        - name: lat
+          in: query
+          schema: { type: number, format: float }
+        - name: lon
+          in: query
+          schema: { type: number, format: float }
+      responses:
+        '200':
+          description: Utility rate information.
+  /solar/solar_resource/v1.json:
+    get:
+      summary: Solar resource data
+      description: Average direct normal, global horizontal, and tilt at latitude irradiance for a US location.
+      parameters:
+        - name: address
+          in: query
+          schema: { type: string }
+        - name: lat
+          in: query
+          schema: { type: number, format: float }
+        - name: lon
+          in: query
+          schema: { type: number, format: float }
+      responses:
+        '200':
+          description: Solar resource data set.
+components:
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
