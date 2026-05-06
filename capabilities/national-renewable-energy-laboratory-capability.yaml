@@ -1,0 +1,417 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: NREL Developer Network APIs
+  description: Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative
+    fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer
+    API key.
+  tags:
+  - National
+  - Renewable
+  - Energy
+  - Laboratory
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: national-renewable-energy-laboratory
+    baseUri: https://developer.nrel.gov/api
+    description: NREL Developer Network APIs HTTP API.
+    authentication:
+      type: apikey
+      in: query
+      name: api_key
+      value: '{{NATIONAL_RENEWABLE_ENERGY_LABORATORY_TOKEN}}'
+    resources:
+    - name: alt-fuel-stations-v1-json
+      path: /alt-fuel-stations/v1.json
+      operations:
+      - name: get-alt-fuel-stations-v1-json
+        method: GET
+        description: Search alternative fuel stations
+        inputParameters:
+        - name: fuel_type
+          in: query
+          type: string
+          description: Comma-separated list (e.g., ELEC,LPG,CNG).
+        - name: state
+          in: query
+          type: string
+        - name: zip
+          in: query
+          type: string
+        - name: status
+          in: query
+          type: string
+        - name: access
+          in: query
+          type: string
+        - name: limit
+          in: query
+          type: integer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: alt-fuel-stations-v1-nearest-json
+      path: /alt-fuel-stations/v1/nearest.json
+      operations:
+      - name: get-alt-fuel-stations-v1-nearest-json
+        method: GET
+        description: Find nearest alternative fuel stations
+        inputParameters:
+        - name: location
+          in: query
+          type: string
+          description: Address or place name.
+        - name: latitude
+          in: query
+          type: number
+        - name: longitude
+          in: query
+          type: number
+        - name: radius
+          in: query
+          type: number
+          description: Search radius in miles.
+        - name: fuel_type
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: pvwatts-v8-json
+      path: /pvwatts/v8.json
+      operations:
+      - name: get-pvwatts-v8-json
+        method: GET
+        description: PVWatts solar PV system production estimate
+        inputParameters:
+        - name: system_capacity
+          in: query
+          type: number
+          required: true
+          description: System size in kW DC.
+        - name: module_type
+          in: query
+          type: integer
+          required: true
+        - name: losses
+          in: query
+          type: number
+          required: true
+        - name: array_type
+          in: query
+          type: integer
+          required: true
+        - name: tilt
+          in: query
+          type: number
+          required: true
+        - name: azimuth
+          in: query
+          type: number
+          required: true
+        - name: address
+          in: query
+          type: string
+        - name: lat
+          in: query
+          type: number
+        - name: lon
+          in: query
+          type: number
+        - name: timeframe
+          in: query
+          type: string
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: utility-rates-v3-json
+      path: /utility_rates/v3.json
+      operations:
+      - name: get-utility-rates-v3-json
+        method: GET
+        description: Utility electricity rates by location
+        inputParameters:
+        - name: address
+          in: query
+          type: string
+        - name: lat
+          in: query
+          type: number
+        - name: lon
+          in: query
+          type: number
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: solar-solar-resource-v1-json
+      path: /solar/solar_resource/v1.json
+      operations:
+      - name: get-solar-solar-resource-v1-json
+        method: GET
+        description: Solar resource data
+        inputParameters:
+        - name: address
+          in: query
+          type: string
+        - name: lat
+          in: query
+          type: number
+        - name: lon
+          in: query
+          type: number
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: national-renewable-energy-laboratory-rest
+    description: REST adapter for NREL Developer Network APIs.
+    resources:
+    - path: /alt-fuel-stations/v1.json
+      name: get-alt-fuel-stations-v1-json
+      operations:
+      - method: GET
+        name: get-alt-fuel-stations-v1-json
+        description: Search alternative fuel stations
+        call: national-renewable-energy-laboratory.get-alt-fuel-stations-v1-json
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /alt-fuel-stations/v1/nearest.json
+      name: get-alt-fuel-stations-v1-nearest-json
+      operations:
+      - method: GET
+        name: get-alt-fuel-stations-v1-nearest-json
+        description: Find nearest alternative fuel stations
+        call: national-renewable-energy-laboratory.get-alt-fuel-stations-v1-nearest-json
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /pvwatts/v8.json
+      name: get-pvwatts-v8-json
+      operations:
+      - method: GET
+        name: get-pvwatts-v8-json
+        description: PVWatts solar PV system production estimate
+        call: national-renewable-energy-laboratory.get-pvwatts-v8-json
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /utility_rates/v3.json
+      name: get-utility-rates-v3-json
+      operations:
+      - method: GET
+        name: get-utility-rates-v3-json
+        description: Utility electricity rates by location
+        call: national-renewable-energy-laboratory.get-utility-rates-v3-json
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /solar/solar_resource/v1.json
+      name: get-solar-solar-resource-v1-json
+      operations:
+      - method: GET
+        name: get-solar-solar-resource-v1-json
+        description: Solar resource data
+        call: national-renewable-energy-laboratory.get-solar-solar-resource-v1-json
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: national-renewable-energy-laboratory-mcp
+    transport: http
+    description: MCP adapter for NREL Developer Network APIs for AI agent use.
+    tools:
+    - name: get-alt-fuel-stations-v1-json
+      description: Search alternative fuel stations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-renewable-energy-laboratory.get-alt-fuel-stations-v1-json
+      with:
+        fuel_type: tools.fuel_type
+        state: tools.state
+        zip: tools.zip
+        status: tools.status
+        access: tools.access
+        limit: tools.limit
+      inputParameters:
+      - name: fuel_type
+        type: string
+        description: Comma-separated list (e.g., ELEC,LPG,CNG).
+      - name: state
+        type: string
+        description: state
+      - name: zip
+        type: string
+        description: zip
+      - name: status
+        type: string
+        description: status
+      - name: access
+        type: string
+        description: access
+      - name: limit
+        type: integer
+        description: limit
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-alt-fuel-stations-v1-nearest-json
+      description: Find nearest alternative fuel stations
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-renewable-energy-laboratory.get-alt-fuel-stations-v1-nearest-json
+      with:
+        location: tools.location
+        latitude: tools.latitude
+        longitude: tools.longitude
+        radius: tools.radius
+        fuel_type: tools.fuel_type
+      inputParameters:
+      - name: location
+        type: string
+        description: Address or place name.
+      - name: latitude
+        type: number
+        description: latitude
+      - name: longitude
+        type: number
+        description: longitude
+      - name: radius
+        type: number
+        description: Search radius in miles.
+      - name: fuel_type
+        type: string
+        description: fuel_type
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-pvwatts-v8-json
+      description: PVWatts solar PV system production estimate
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-renewable-energy-laboratory.get-pvwatts-v8-json
+      with:
+        system_capacity: tools.system_capacity
+        module_type: tools.module_type
+        losses: tools.losses
+        array_type: tools.array_type
+        tilt: tools.tilt
+        azimuth: tools.azimuth
+        address: tools.address
+        lat: tools.lat
+        lon: tools.lon
+        timeframe: tools.timeframe
+      inputParameters:
+      - name: system_capacity
+        type: number
+        description: System size in kW DC.
+        required: true
+      - name: module_type
+        type: integer
+        description: module_type
+        required: true
+      - name: losses
+        type: number
+        description: losses
+        required: true
+      - name: array_type
+        type: integer
+        description: array_type
+        required: true
+      - name: tilt
+        type: number
+        description: tilt
+        required: true
+      - name: azimuth
+        type: number
+        description: azimuth
+        required: true
+      - name: address
+        type: string
+        description: address
+      - name: lat
+        type: number
+        description: lat
+      - name: lon
+        type: number
+        description: lon
+      - name: timeframe
+        type: string
+        description: timeframe
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-utility-rates-v3-json
+      description: Utility electricity rates by location
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-renewable-energy-laboratory.get-utility-rates-v3-json
+      with:
+        address: tools.address
+        lat: tools.lat
+        lon: tools.lon
+      inputParameters:
+      - name: address
+        type: string
+        description: address
+      - name: lat
+        type: number
+        description: lat
+      - name: lon
+        type: number
+        description: lon
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-solar-solar-resource-v1-json
+      description: Solar resource data
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: national-renewable-energy-laboratory.get-solar-solar-resource-v1-json
+      with:
+        address: tools.address
+        lat: tools.lat
+        lon: tools.lon
+      inputParameters:
+      - name: address
+        type: string
+        description: address
+      - name: lat
+        type: number
+        description: lat
+      - name: lon
+        type: number
+        description: lon
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    NATIONAL_RENEWABLE_ENERGY_LABORATORY_TOKEN: NATIONAL_RENEWABLE_ENERGY_LABORATORY_TOKEN
