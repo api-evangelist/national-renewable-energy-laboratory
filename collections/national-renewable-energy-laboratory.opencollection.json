@@ -1,0 +1,222 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NREL Developer Network APIs",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Search alternative fuel stations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.nrel.gov/api/alt-fuel-stations/v1.json",
+        "params": [
+          {
+            "name": "fuel_type",
+            "value": "",
+            "type": "query",
+            "description": "Comma-separated list (e.g., ELEC,LPG,CNG)."
+          },
+          {
+            "name": "state",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "zip",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "status",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "access",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Retrieve alternative fuel station records with filters for fuel type, state, location, and access."
+    },
+    {
+      "info": {
+        "name": "Find nearest alternative fuel stations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json",
+        "params": [
+          {
+            "name": "location",
+            "value": "",
+            "type": "query",
+            "description": "Address or place name."
+          },
+          {
+            "name": "latitude",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "longitude",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "radius",
+            "value": "",
+            "type": "query",
+            "description": "Search radius in miles."
+          },
+          {
+            "name": "fuel_type",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Find nearest alternative fuel stations"
+    },
+    {
+      "info": {
+        "name": "PVWatts solar PV system production estimate",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.nrel.gov/api/pvwatts/v8.json",
+        "params": [
+          {
+            "name": "system_capacity",
+            "value": "",
+            "type": "query",
+            "description": "System size in kW DC."
+          },
+          {
+            "name": "module_type",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "losses",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "array_type",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "tilt",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "azimuth",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "address",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "lat",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "lon",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "timeframe",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Estimate the energy production of grid-connected photovoltaic systems for any location."
+    },
+    {
+      "info": {
+        "name": "Utility electricity rates by location",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.nrel.gov/api/utility_rates/v3.json",
+        "params": [
+          {
+            "name": "address",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "lat",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "lon",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Lookup average commercial, industrial, and residential utility rates for a given location."
+    },
+    {
+      "info": {
+        "name": "Solar resource data",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://developer.nrel.gov/api/solar/solar_resource/v1.json",
+        "params": [
+          {
+            "name": "address",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "lat",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "lon",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Average direct normal, global horizontal, and tilt at latitude irradiance for a US location."
+    }
+  ],
+  "bundled": true
+}

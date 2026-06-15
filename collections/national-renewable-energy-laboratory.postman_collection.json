@@ -1,0 +1,621 @@
+{
+  "item": [
+    {
+      "id": "157c4ffe-0697-4409-a41f-029d1a2992b9",
+      "name": "Search alternative fuel stations",
+      "request": {
+        "name": "Search alternative fuel stations",
+        "description": {
+          "content": "Retrieve alternative fuel station records with filters for fuel type, state, location, and access.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "alt-fuel-stations",
+            "v1.json"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "fuel_type",
+              "value": "<string>",
+              "description": "Comma-separated list (e.g., ELEC,LPG,CNG)."
+            },
+            {
+              "disabled": false,
+              "key": "state",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "zip",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "status",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "access",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "limit",
+              "value": "<integer>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "d89dc83d-b6d9-4235-a301-9e398e385f4b",
+          "name": "Alternative fuel station records.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "alt-fuel-stations",
+                "v1.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "fuel_type",
+                  "value": "<string>"
+                },
+                {
+                  "key": "state",
+                  "value": "<string>"
+                },
+                {
+                  "key": "zip",
+                  "value": "<string>"
+                },
+                {
+                  "key": "status",
+                  "value": "<string>"
+                },
+                {
+                  "key": "access",
+                  "value": "<string>"
+                },
+                {
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "65885ccc-eb7d-4638-bfe0-ca21fcf20d91",
+      "name": "Find nearest alternative fuel stations",
+      "request": {
+        "name": "Find nearest alternative fuel stations",
+        "description": {},
+        "url": {
+          "path": [
+            "alt-fuel-stations",
+            "v1",
+            "nearest.json"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "location",
+              "value": "<string>",
+              "description": "Address or place name."
+            },
+            {
+              "disabled": false,
+              "key": "latitude",
+              "value": "<float>"
+            },
+            {
+              "disabled": false,
+              "key": "longitude",
+              "value": "<float>"
+            },
+            {
+              "disabled": false,
+              "key": "radius",
+              "value": "<number>",
+              "description": "Search radius in miles."
+            },
+            {
+              "disabled": false,
+              "key": "fuel_type",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "8fd10bbd-e904-4bba-8631-07a9a6669542",
+          "name": "Nearest stations within the radius.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "alt-fuel-stations",
+                "v1",
+                "nearest.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "<string>"
+                },
+                {
+                  "key": "latitude",
+                  "value": "<float>"
+                },
+                {
+                  "key": "longitude",
+                  "value": "<float>"
+                },
+                {
+                  "key": "radius",
+                  "value": "<number>"
+                },
+                {
+                  "key": "fuel_type",
+                  "value": "<string>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "83427f85-0dae-4600-a21b-e8e5a061e555",
+      "name": "PVWatts solar PV system production estimate",
+      "request": {
+        "name": "PVWatts solar PV system production estimate",
+        "description": {
+          "content": "Estimate the energy production of grid-connected photovoltaic systems for any location.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "pvwatts",
+            "v8.json"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "system_capacity",
+              "value": "<number>",
+              "description": "(Required) System size in kW DC."
+            },
+            {
+              "disabled": false,
+              "key": "module_type",
+              "value": "<integer>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "losses",
+              "value": "<number>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "array_type",
+              "value": "<integer>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "tilt",
+              "value": "<number>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "azimuth",
+              "value": "<number>",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "key": "address",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "lat",
+              "value": "<float>"
+            },
+            {
+              "disabled": false,
+              "key": "lon",
+              "value": "<float>"
+            },
+            {
+              "disabled": false,
+              "key": "timeframe",
+              "value": "<string>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "f82e3b3f-1821-4e6f-a9b8-d5a93e2f07d0",
+          "name": "Modeled solar PV production output.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "pvwatts",
+                "v8.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "system_capacity",
+                  "value": "<number>"
+                },
+                {
+                  "key": "module_type",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "losses",
+                  "value": "<number>"
+                },
+                {
+                  "key": "array_type",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "tilt",
+                  "value": "<number>"
+                },
+                {
+                  "key": "azimuth",
+                  "value": "<number>"
+                },
+                {
+                  "key": "address",
+                  "value": "<string>"
+                },
+                {
+                  "key": "lat",
+                  "value": "<float>"
+                },
+                {
+                  "key": "lon",
+                  "value": "<float>"
+                },
+                {
+                  "key": "timeframe",
+                  "value": "<string>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "778593e0-e55d-462f-83bd-1d9798720948",
+      "name": "Utility electricity rates by location",
+      "request": {
+        "name": "Utility electricity rates by location",
+        "description": {
+          "content": "Lookup average commercial, industrial, and residential utility rates for a given location.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "utility_rates",
+            "v3.json"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "address",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "lat",
+              "value": "<float>"
+            },
+            {
+              "disabled": false,
+              "key": "lon",
+              "value": "<float>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2614f324-fabb-4e0a-b183-bbbab63c435b",
+          "name": "Utility rate information.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "utility_rates",
+                "v3.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "address",
+                  "value": "<string>"
+                },
+                {
+                  "key": "lat",
+                  "value": "<float>"
+                },
+                {
+                  "key": "lon",
+                  "value": "<float>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "c18654f2-1bbb-4b68-855f-136b1bb808fb",
+      "name": "Solar resource data",
+      "request": {
+        "name": "Solar resource data",
+        "description": {
+          "content": "Average direct normal, global horizontal, and tilt at latitude irradiance for a US location.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "solar",
+            "solar_resource",
+            "v1.json"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [
+            {
+              "disabled": false,
+              "key": "address",
+              "value": "<string>"
+            },
+            {
+              "disabled": false,
+              "key": "lat",
+              "value": "<float>"
+            },
+            {
+              "disabled": false,
+              "key": "lon",
+              "value": "<float>"
+            }
+          ],
+          "variable": []
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "a9176eee-7668-40dc-8cff-335632be641b",
+          "name": "Solar resource data set.",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "solar",
+                "solar_resource",
+                "v1.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "key": "address",
+                  "value": "<string>"
+                },
+                {
+                  "key": "lat",
+                  "value": "<float>"
+                },
+                {
+                  "key": "lon",
+                  "value": "<float>"
+                },
+                {
+                  "key": "api_key",
+                  "value": "<API Key>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developer.nrel.gov/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f5beacc0-fbd2-4483-bfcb-4affbc3ebf99",
+    "name": "NREL Developer Network APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.\n\nContact Support:\n Name: NREL Developer Network",
+      "type": "text/plain"
+    }
+  }
+}
