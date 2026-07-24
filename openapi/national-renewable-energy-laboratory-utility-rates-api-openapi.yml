@@ -1,0 +1,46 @@
+openapi: 3.0.3
+info:
+  title: NREL Developer Network APIs Alt Fuel Stations Utility Rates API
+  description: Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.
+  version: 1.0.0
+  contact:
+    name: NREL Developer Network
+    url: https://developer.nrel.gov/
+servers:
+- url: https://developer.nrel.gov/api
+  description: Production
+security:
+- apiKeyQuery: []
+tags:
+- name: Utility Rates
+paths:
+  /utility_rates/v3.json:
+    get:
+      summary: Utility electricity rates by location
+      description: Lookup average commercial, industrial, and residential utility rates for a given location.
+      parameters:
+      - name: address
+        in: query
+        schema:
+          type: string
+      - name: lat
+        in: query
+        schema:
+          type: number
+          format: float
+      - name: lon
+        in: query
+        schema:
+          type: number
+          format: float
+      responses:
+        '200':
+          description: Utility rate information.
+      tags:
+      - Utility Rates
+components:
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key

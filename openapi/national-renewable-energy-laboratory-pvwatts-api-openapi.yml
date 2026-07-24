@@ -1,0 +1,94 @@
+openapi: 3.0.3
+info:
+  title: NREL Developer Network APIs Alt Fuel Stations Pvwatts API
+  description: Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.
+  version: 1.0.0
+  contact:
+    name: NREL Developer Network
+    url: https://developer.nrel.gov/
+servers:
+- url: https://developer.nrel.gov/api
+  description: Production
+security:
+- apiKeyQuery: []
+tags:
+- name: Pvwatts
+paths:
+  /pvwatts/v8.json:
+    get:
+      summary: PVWatts solar PV system production estimate
+      description: Estimate the energy production of grid-connected photovoltaic systems for any location.
+      parameters:
+      - name: system_capacity
+        in: query
+        required: true
+        schema:
+          type: number
+        description: System size in kW DC.
+      - name: module_type
+        in: query
+        required: true
+        schema:
+          type: integer
+          enum:
+          - 0
+          - 1
+          - 2
+      - name: losses
+        in: query
+        required: true
+        schema:
+          type: number
+      - name: array_type
+        in: query
+        required: true
+        schema:
+          type: integer
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+      - name: tilt
+        in: query
+        required: true
+        schema:
+          type: number
+      - name: azimuth
+        in: query
+        required: true
+        schema:
+          type: number
+      - name: address
+        in: query
+        schema:
+          type: string
+      - name: lat
+        in: query
+        schema:
+          type: number
+          format: float
+      - name: lon
+        in: query
+        schema:
+          type: number
+          format: float
+      - name: timeframe
+        in: query
+        schema:
+          type: string
+          enum:
+          - monthly
+          - hourly
+      responses:
+        '200':
+          description: Modeled solar PV production output.
+      tags:
+      - Pvwatts
+components:
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key

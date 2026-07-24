@@ -1,0 +1,46 @@
+openapi: 3.0.3
+info:
+  title: NREL Developer Network APIs Alt Fuel Stations Solar API
+  description: Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.
+  version: 1.0.0
+  contact:
+    name: NREL Developer Network
+    url: https://developer.nrel.gov/
+servers:
+- url: https://developer.nrel.gov/api
+  description: Production
+security:
+- apiKeyQuery: []
+tags:
+- name: Solar
+paths:
+  /solar/solar_resource/v1.json:
+    get:
+      summary: Solar resource data
+      description: Average direct normal, global horizontal, and tilt at latitude irradiance for a US location.
+      parameters:
+      - name: address
+        in: query
+        schema:
+          type: string
+      - name: lat
+        in: query
+        schema:
+          type: number
+          format: float
+      - name: lon
+        in: query
+        schema:
+          type: number
+          format: float
+      responses:
+        '200':
+          description: Solar resource data set.
+      tags:
+      - Solar
+components:
+  securitySchemes:
+    apiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
