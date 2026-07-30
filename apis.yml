@@ -5,9 +5,22 @@ description: >-
   developers access to renewable energy, alternative fuel, electricity, building, climate, solar, wind, and
   transportation data and analysis services produced by NREL.
 type: Index
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/national-renewable-energy-laboratory.png
 url: https://raw.githubusercontent.com/api-evangelist/national-renewable-energy-laboratory/refs/heads/main/apis.yml
 created: '2025-05-02'
 modified: '2026-05-19'
@@ -19,70 +32,115 @@ tags:
   - Climate
   - Research
 apis:
-  - aid: national-renewable-energy-laboratory:nrel-developer-network
-    name: NREL Developer Network
-    description: >-
-      The umbrella developer portal for NREL APIs spanning alternative fuel stations, solar resource and PV modeling,
-      utility rates, building energy use, climate, electricity, transportation, wave, and wind data.
-    humanURL: https://developer.nrel.gov/
-    baseURL: https://developer.nrel.gov/api/
-    tags:
-      - Energy
-      - Renewable Energy
-    properties:
-      - type: Documentation
-        url: https://developer.nrel.gov/docs/
-      - type: Signup
-        url: https://developer.nrel.gov/signup/
-      - type: OpenAPI
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/national-renewable-energy-laboratory/refs/heads/main/openapi/national-renewable-energy-laboratory-openapi.yml
-  - aid: national-renewable-energy-laboratory:alternative-fuel-stations
-    name: Alternative Fuel Stations
-    description: >-
-      Locate alternative fuel stations across the United States with filters for fuel type, location, status, and
-      access.
-    humanURL: https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/
-    baseURL: https://developer.nrel.gov/api/alt-fuel-stations/v1/
-    tags:
-      - Transportation
-      - Alternative Fuel
-    properties:
-      - type: Documentation
-        url: https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/
-  - aid: national-renewable-energy-laboratory:pvwatts
-    name: PVWatts
-    description: Estimate the energy production and cost of grid-connected photovoltaic energy systems for any location.
-    humanURL: https://developer.nrel.gov/docs/solar/pvwatts/v8/
-    baseURL: https://developer.nrel.gov/api/pvwatts/v8/
-    tags:
-      - Solar
-      - Modeling
-    properties:
-      - type: Documentation
-        url: https://developer.nrel.gov/docs/solar/pvwatts/v8/
-  - aid: national-renewable-energy-laboratory:utility-rates
-    name: Utility Rates
-    description: Average commercial, industrial, and residential utility rates by US location.
-    humanURL: https://developer.nrel.gov/docs/electricity/utility-rates-v3/
-    baseURL: https://developer.nrel.gov/api/utility_rates/v3/
-    tags:
-      - Electricity
-      - Rates
-    properties:
-      - type: Documentation
-        url: https://developer.nrel.gov/docs/electricity/utility-rates-v3/
-  - aid: national-renewable-energy-laboratory:solar-resource-data
-    name: Solar Resource Data
-    description: Average direct normal, global horizontal, and tilt at latitude irradiance for a US location.
-    humanURL: https://developer.nrel.gov/docs/solar/solar-resource-v1/
-    baseURL: https://developer.nrel.gov/api/solar/solar_resource/v1/
-    tags:
-      - Solar
-      - Climate
-    properties:
-      - type: Documentation
-        url: https://developer.nrel.gov/docs/solar/solar-resource-v1/
+- aid: national-renewable-energy-laboratory:alternative-fuel-stations
+  name: Alternative Fuel Stations
+  description: >-
+    Locate alternative fuel stations across the United States with filters for fuel type, location, status,
+    and access.
+  humanURL: https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/
+  baseURL: https://developer.nrel.gov/api/alt-fuel-stations/v1/
+  tags:
+  - Transportation
+  - Alternative Fuel
+  properties:
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/transportation/alt-fuel-stations-v1/
+- aid: national-renewable-energy-laboratory:pvwatts
+  name: PVWatts
+  description: >-
+    Estimate the energy production and cost of grid-connected photovoltaic energy systems for any location.
+  humanURL: https://developer.nrel.gov/docs/solar/pvwatts/v8/
+  baseURL: https://developer.nrel.gov/api/pvwatts/v8/
+  tags:
+  - Solar
+  - Modeling
+  properties:
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/solar/pvwatts/v8/
+- aid: national-renewable-energy-laboratory:utility-rates
+  name: Utility Rates
+  description: Average commercial, industrial, and residential utility rates by US location.
+  humanURL: https://developer.nrel.gov/docs/electricity/utility-rates-v3/
+  baseURL: https://developer.nrel.gov/api/utility_rates/v3/
+  tags:
+  - Electricity
+  - Rates
+  properties:
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/electricity/utility-rates-v3/
+- aid: national-renewable-energy-laboratory:solar-resource-data
+  name: Solar Resource Data
+  description: >-
+    Average direct normal, global horizontal, and tilt at latitude irradiance for a US location.
+  humanURL: https://developer.nrel.gov/docs/solar/solar-resource-v1/
+  baseURL: https://developer.nrel.gov/api/solar/solar_resource/v1/
+  tags:
+  - Solar
+  - Climate
+  properties:
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/solar/solar-resource-v1/
+- aid: >-
+    national-renewable-energy-laboratory:national-renewable-energy-laboratory-alt-fuel-stations-api
+  name: National Renewable Energy Laboratory Alt Fuel Stations API
+  description: >-
+    The Alt Fuel Stations API from National Renewable Energy Laboratory — 2 operation(s) for alt fuel
+    stations.
+  humanURL: https://developer.nrel.gov/
+  baseURL: https://developer.nrel.gov/api/
+  tags:
+  - Alt Fuel Stations
+  properties:
+  - type: OpenAPI
+    url: openapi/national-renewable-energy-laboratory-alt-fuel-stations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/
+  - type: Signup
+    url: https://developer.nrel.gov/signup/
+- aid: national-renewable-energy-laboratory:national-renewable-energy-laboratory-pvwatts-api
+  name: National Renewable Energy Laboratory Pvwatts API
+  description: The Pvwatts API from National Renewable Energy Laboratory — 1 operation(s) for pvwatts.
+  humanURL: https://developer.nrel.gov/
+  baseURL: https://developer.nrel.gov/api/
+  tags:
+  - Pvwatts
+  properties:
+  - type: OpenAPI
+    url: openapi/national-renewable-energy-laboratory-pvwatts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/
+  - type: Signup
+    url: https://developer.nrel.gov/signup/
+- aid: national-renewable-energy-laboratory:national-renewable-energy-laboratory-solar-api
+  name: National Renewable Energy Laboratory Solar API
+  description: The Solar API from National Renewable Energy Laboratory — 1 operation(s) for solar.
+  humanURL: https://developer.nrel.gov/
+  baseURL: https://developer.nrel.gov/api/
+  tags:
+  - Solar
+  properties:
+  - type: OpenAPI
+    url: openapi/national-renewable-energy-laboratory-solar-api-openapi.yml
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/
+  - type: Signup
+    url: https://developer.nrel.gov/signup/
+- aid: >-
+    national-renewable-energy-laboratory:national-renewable-energy-laboratory-utility-rates-api
+  name: National Renewable Energy Laboratory Utility Rates API
+  description: >-
+    The Utility Rates API from National Renewable Energy Laboratory — 1 operation(s) for utility rates.
+  humanURL: https://developer.nrel.gov/
+  baseURL: https://developer.nrel.gov/api/
+  tags:
+  - Utility Rates
+  properties:
+  - type: OpenAPI
+    url: openapi/national-renewable-energy-laboratory-utility-rates-api-openapi.yml
+  - type: Documentation
+    url: https://developer.nrel.gov/docs/
+  - type: Signup
+    url: https://developer.nrel.gov/signup/
 common:
   - type: AgenticAccess
     url: agentic-access/national-renewable-energy-laboratory-agentic-access.yml
