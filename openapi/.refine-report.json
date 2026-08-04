@@ -1,0 +1,20 @@
+{
+  "provider": "national-renewable-energy-laboratory",
+  "sources": [
+    "national-renewable-energy-laboratory-alt-fuel-stations-api-openapi.yml",
+    "national-renewable-energy-laboratory-pvwatts-api-openapi.yml",
+    "national-renewable-energy-laboratory-solar-api-openapi.yml",
+    "national-renewable-energy-laboratory-utility-rates-api-openapi.yml"
+  ],
+  "outputs": [
+    "national-renewable-energy-laboratory-alt-fuel-stations-api-openapi.yml",
+    "national-renewable-energy-laboratory-pvwatts-api-openapi.yml",
+    "national-renewable-energy-laboratory-solar-api-openapi.yml",
+    "national-renewable-energy-laboratory-utility-rates-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
