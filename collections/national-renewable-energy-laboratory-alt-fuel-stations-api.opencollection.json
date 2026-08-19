@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NREL Developer Network APIs Alt Fuel Stations API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Alt Fuel Stations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search alternative fuel stations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.nrel.gov/api/alt-fuel-stations/v1.json",
+            "params": [
+              {
+                "name": "fuel_type",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list (e.g., ELEC,LPG,CNG)."
+              },
+              {
+                "name": "state",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "zip",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "status",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "access",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve alternative fuel station records with filters for fuel type, state, location, and access."
+        },
+        {
+          "info": {
+            "name": "Find nearest alternative fuel stations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json",
+            "params": [
+              {
+                "name": "location",
+                "value": "",
+                "type": "query",
+                "description": "Address or place name."
+              },
+              {
+                "name": "latitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "longitude",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "radius",
+                "value": "",
+                "type": "query",
+                "description": "Search radius in miles."
+              },
+              {
+                "name": "fuel_type",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Find nearest alternative fuel stations"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

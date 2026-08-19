@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "63871aab-5c3d-41db-b583-c8be96da0576",
+      "name": "Pvwatts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bde065d8-308a-4cbf-98a8-2560015d5061",
+          "name": "PVWatts solar PV system production estimate",
+          "request": {
+            "name": "PVWatts solar PV system production estimate",
+            "description": {
+              "content": "Estimate the energy production of grid-connected photovoltaic systems for any location.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pvwatts",
+                "v8.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "system_capacity",
+                  "value": "<number>",
+                  "description": "(Required) System size in kW DC."
+                },
+                {
+                  "disabled": false,
+                  "key": "module_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "losses",
+                  "value": "<number>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "array_type",
+                  "value": "<integer>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "tilt",
+                  "value": "<number>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "azimuth",
+                  "value": "<number>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "lat",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "lon",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timeframe",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9ce064e8-df45-47b5-bb57-07c7333988b2",
+              "name": "Modeled solar PV production output.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pvwatts",
+                    "v8.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "system_capacity",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "module_type",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "losses",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "array_type",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "tilt",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "azimuth",
+                      "value": "<number>"
+                    },
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lat",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "lon",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "timeframe",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developer.nrel.gov/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1ed0fc78-d2a2-4ed2-8b57-d0d506114116",
+    "name": "NREL Developer Network APIs Alt Fuel Stations Pvwatts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.\n\nContact Support:\n Name: NREL Developer Network",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "NREL Developer Network APIs Alt Fuel Stations Solar API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "api_key",
+      "value": "{{api_key}}",
+      "placement": "query"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Solar",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Solar resource data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://developer.nrel.gov/api/solar/solar_resource/v1.json",
+            "params": [
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "lat",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "lon",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Average direct normal, global horizontal, and tilt at latitude irradiance for a US location."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

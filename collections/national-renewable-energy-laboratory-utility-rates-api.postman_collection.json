@@ -1,0 +1,142 @@
+{
+  "item": [
+    {
+      "id": "a999c1c4-2898-4679-a756-c50d24efa58e",
+      "name": "Utility Rates",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ccfd1d9b-5aeb-4afe-a732-786b5a509b86",
+          "name": "Utility electricity rates by location",
+          "request": {
+            "name": "Utility electricity rates by location",
+            "description": {
+              "content": "Lookup average commercial, industrial, and residential utility rates for a given location.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "utility_rates",
+                "v3.json"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "lat",
+                  "value": "<float>"
+                },
+                {
+                  "disabled": false,
+                  "key": "lon",
+                  "value": "<float>"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "020eb7fa-12af-47b8-bba2-74fd16c163f9",
+              "name": "Utility rate information.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "utility_rates",
+                    "v3.json"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "lat",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "lon",
+                      "value": "<float>"
+                    },
+                    {
+                      "key": "api_key",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developer.nrel.gov/api",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e8956301-efa7-455c-831d-676fbbb8157a",
+    "name": "NREL Developer Network APIs Alt Fuel Stations Utility Rates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.\n\nContact Support:\n Name: NREL Developer Network",
+      "type": "text/plain"
+    }
+  }
+}
