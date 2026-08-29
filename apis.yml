@@ -5,6 +5,18 @@ description: >-
   developers access to renewable energy, alternative fuel, electricity, building, climate, solar, wind, and
   transportation data and analysis services produced by NREL.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
