@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: NREL Developer Network APIs Alt Fuel Stations Pvwatts API
+  title: NREL Developer Network Pvwatts API
   description: Selected endpoints from the National Renewable Energy Laboratory (NREL) developer network covering alternative fuel stations, solar resource and PV modeling, and utility electricity rate lookups. All endpoints require a developer API key.
   version: 1.0.0
   contact:
@@ -86,6 +86,8 @@ paths:
           description: Modeled solar PV production output.
       tags:
       - Pvwatts
+      operationId: getPvwattsV8Json
+      x-operation-id-source: derived
 components:
   securitySchemes:
     apiKeyQuery:
