@@ -40,7 +40,7 @@ specificationVersion: '0.23'
 tags:
   - Energy
   - Renewable Energy
-  - Federal-Government
+  - Federal Government
   - Climate
   - Research
 tags_raw:
@@ -49,6 +49,7 @@ tags_raw:
   - Federal Government
   - Climate
   - Research
+  - Federal-Government
 apis:
 - aid: national-renewable-energy-laboratory:alternative-fuel-stations
   name: Alternative Fuel Stations
