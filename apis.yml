@@ -161,6 +161,12 @@ apis:
   - type: Signup
     url: https://developer.nrel.gov/signup/
 common:
+  - type: Plans
+    url: plans/national-renewable-energy-laboratory-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/national-renewable-energy-laboratory-rate-limits.yml
+  - type: FinOps
+    url: finops/national-renewable-energy-laboratory-finops.yml
   - type: AgenticAccess
     url: agentic-access/national-renewable-energy-laboratory-agentic-access.yml
   - type: Authentication
